@@ -13,7 +13,7 @@ For the original project and more details, please visit [ETH Proof Beginner Repo
 
 ## Requirements
 
-- Solidity `0.8.0`
+- Solidity `0.8.26`
 - An Ethereum development environment (e.g., [Remix](https://remix.ethereum.org/), [Truffle](https://archive.trufflesuite.com/))
 
 ## Usage
