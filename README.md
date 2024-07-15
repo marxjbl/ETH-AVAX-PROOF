@@ -1,46 +1,36 @@
-# Smart Contract Project
+# Smart Contract (Project Update)
 
-This project demonstrates a simple Solidity smart contract implementing `require()`, `assert()`, and `revert()` statements. The contract allows users to deposit and withdraw Ether, and includes basic checks to ensure the contract operates correctly.
+This repository contains an updated version of the MyToken project originally implemented in a Solidity smart contract. The contract showcases token creation, minting, and burning functionalities on the Ethereum blockchain.
+
+For the original project and more details, please visit [ETH Proof Beginner Repository](https://github.com/marxjbl/ETH-Proof-Beginner).
 
 ## Features
 
-- Deposit Ether into the contract
-- Withdraw Ether from the contract (only owner)
-- Assert balance integrity
-- Trigger a custom revert message
+- **Token Creation:** Easily create a new token with customizable details such as name and abbreviation.
+- **Token Minting:** Increase the total supply of tokens and allocate them to specific addresses using the `mint` function.
+- **Token Burning:** Decrease the total supply of tokens and reduce balances from specific addresses using the `burn` function. Includes `require()`, `assert()`, and `revert()` statements to ensure operations are executed under valid conditions and maintain internal consistency.
+- **Balance Tracking:** Utilize a mapping to maintain and query token balances for individual addresses. Ensure accurate balance updates during minting and burning operations.
 
 ## Requirements
 
-- Solidity ^0.8.0
-- An Ethereum development environment (e.g., Remix, Truffle)
+- Solidity `0.8.0`
+- An Ethereum development environment (e.g., [Remix](https://remix.ethereum.org/), [Truffle](https://archive.trufflesuite.com/))
 
 ## Usage
 
-1. **Deploy the Contract:**
-   Deploy the contract to an Ethereum network using Remix or another development tool.
-
-2. **Deposit Ether:**
-   Call the `deposit()` function and send Ether to the contract.
-
-3. **Withdraw Ether:**
-   Call the `withdraw(uint256 amount)` function (only the owner can withdraw).
-
-4. **Check Balance:**
-   Call the `checkBalance()` function to verify the balance integrity.
-
-5. **Trigger Revert:**
-   Call the `triggerRevert()` function to trigger a custom revert message.
-
-## Code Walk-through
-
-For a detailed explanation of the code and its functionality, watch the [code walk-through video](https://loom.com).
+1. **Deploying the Contract:**
+   - Deploy the `MyToken` contract on a local development blockchain or Ethereum test network.
+  
+2. **Interacting with the Contract:**
+   - Use Ethereum tools like Remix or development frameworks like Truffle to interact with deployed contracts.
+   - Call the `mint` function to increase token supply and allocate tokens to addresses.
+   - Call the `burn` function to reduce token supply and adjust balances, ensuring sufficient balances and total supply before execution.
+  
+3. **Testing and Debugging:**
+   - Write and execute tests to verify contract functionality, including scenarios for minting and burning tokens.
+   - Debug potential issues related to token balances and total supply adjustments.
 
 ## Author
 
 Marx Lizardo  
-[GitHub](https://github.com/marxjbl)  
 [LinkedIn](https://www.linkedin.com/in/marxjbl/) 
-
-## License
-
-This project is licensed under the MIT License - see the LICENSE.md file for details.
