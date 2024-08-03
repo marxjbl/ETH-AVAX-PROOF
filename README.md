@@ -1,34 +1,31 @@
-# Smart Contract (Project Update)
+# Auction Smart Contract
 
-This repository contains an updated version of the MyToken project originally implemented in a Solidity smart contract. The contract showcases token creation, minting, and burning functionalities on the Ethereum blockchain.
+This repository contains a Solidity smart contract for a simple auction system. The contract allows users to place bids, and the highest bidder wins the auction when it ends.
 
-For the original project and more details, please visit [ETH Proof Beginner Repository](https://github.com/marxjbl/ETH-Proof-Beginner).
+## Contract Overview
 
-## Features
-
-- **Token Creation:** Easily create a new token with customizable details such as name and abbreviation.
-- **Token Minting:** Increase the total supply of tokens and allocate them to specific addresses using the `mint` function.
-- **Token Burning:** Decrease the total supply of tokens and reduce balances from specific addresses using the `burn` function. Includes `require()`, `assert()`, and `revert()` statements to ensure operations are executed under valid conditions and maintain internal consistency.
-- **Balance Tracking:** Utilize a mapping to maintain and query token balances for individual addresses. Ensure accurate balance updates during minting and burning operations.
-
-## Requirements
-
-- Solidity `0.8.26`
-- An Ethereum development environment (e.g., [Remix](https://remix.ethereum.org/), [Truffle](https://archive.trufflesuite.com/))
+The `Auction` contract includes the following features:
+- Users can place bids that must be higher than the current highest bid.
+- The owner can end the auction and declare the highest bidder as the winner.
+- Events are emitted to notify when a new bid is placed and when the auction ends.
 
 ## Usage
 
-1. **Deploying the Contract:**
-   - Deploy the `MyToken` contract on a local development blockchain or Ethereum test network.
-  
-2. **Interacting with the Contract:**
-   - Use Ethereum tools like Remix or development frameworks like Truffle to interact with deployed contracts.
-   - Call the `mint` function to increase token supply and allocate tokens to addresses.
-   - Call the `burn` function to reduce token supply and adjust balances, ensuring sufficient balances and total supply before execution.
-  
-3. **Testing and Debugging:**
-   - Write and execute tests to verify contract functionality, including scenarios for minting and burning tokens.
-   - Debug potential issues related to token balances and total supply adjustments.
+### Deploying the Contract
+
+1. Compile the contract using Remix IDE.
+2. Deploy the contract using the JavaScript VM environment in Remix.
+
+### Placing a Bid
+
+1. Select an account in Remix.
+2. Set the bid amount and value.
+3. Call the `bid` function to place a bid.
+
+### Ending the Auction
+
+1. Switch back to the owner's account in Remix.
+2. Call the `endAuction` function to end the auction and announce the winner.
 
 ## Author
 
